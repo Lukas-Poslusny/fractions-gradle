@@ -1,4 +1,4 @@
-public class NotImplementedFraction implements IFraction{
+public class NotImplementedFraction implements IFraction {
 
     private final int numerator;
     private final int denominator;
