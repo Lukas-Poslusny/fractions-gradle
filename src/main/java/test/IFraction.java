@@ -1,3 +1,5 @@
+package test;
+
 public interface IFraction {
 
     /**
@@ -12,25 +14,25 @@ public interface IFraction {
 
     /**
      * @param other fraction
-     * @return new instance of IFraction representing the result
+     * @return new instance of test.IFraction representing the result
      */
     IFraction plus(IFraction other);
 
     /**
      * @param other fraction
-     * @return new instance of IFraction representing the result
+     * @return new instance of test.IFraction representing the result
      */
     IFraction minus(IFraction other);
 
     /**
      * @param other fraction
-     * @return new instance of IFraction representing the result
+     * @return new instance of test.IFraction representing the result
      */
     IFraction times(IFraction other);
 
     /**
      * @param other fraction
-     * @return new instance of IFraction representing the result
+     * @return new instance of test.IFraction representing the result
      */
     IFraction dividedBy(IFraction other);
 }

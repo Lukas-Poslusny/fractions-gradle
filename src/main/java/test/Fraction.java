@@ -1,3 +1,5 @@
+package test;
+
 public class Fraction implements IFraction {
 
     private final Integer numerator;
@@ -50,12 +52,12 @@ public class Fraction implements IFraction {
         return createNormalised(numeratorResult, denominatorResult);
     }
 
-    public Fraction createNormalised(Integer numerator, Integer denominator) {
+    public static Fraction createNormalised(Integer numerator, Integer denominator) {
         int gcd = getGcd(numerator, denominator);
         return new Fraction(numerator/gcd, denominator/gcd);
     }
 
-    public int getGcd (Integer numerator, Integer denominator) {
+    public static int getGcd (Integer numerator, Integer denominator) {
         int gcd = 1;
         for (int num = 1; num <= numerator && num <= denominator; num++) {
             if (numerator % num == 0 && denominator % num == 0) {
@@ -67,6 +69,6 @@ public class Fraction implements IFraction {
 
     @Override
     public String toString() {
-        return "Fraction " + numerator + "|" + denominator;
+        return "test.Fraction " + numerator + "|" + denominator;
     }
 }

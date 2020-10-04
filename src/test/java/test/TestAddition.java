@@ -1,6 +1,7 @@
+package test;
+
 import org.junit.Assert;
 import org.junit.Test;
-
 
 public class TestAddition {
 
@@ -9,6 +10,7 @@ public class TestAddition {
         var fraction = TestUtils.createFraction(3, 5);
         var result = fraction.plus(new NotImplementedFraction(3, 5));
 
+        System.out.println(result);
         Assert.assertEquals((Integer) 6, result.getNumerator());
         Assert.assertEquals((Integer) 5, result.getDenominator());
     }

@@ -1,3 +1,5 @@
+package test;
+
 public class TestUtils {
 
     static IFraction createFraction(int numerator, int denominator) {

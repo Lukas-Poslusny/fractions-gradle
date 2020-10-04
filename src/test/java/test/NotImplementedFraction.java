@@ -1,3 +1,5 @@
+package test;
+
 public class NotImplementedFraction implements IFraction {
 
     private final int numerator;
