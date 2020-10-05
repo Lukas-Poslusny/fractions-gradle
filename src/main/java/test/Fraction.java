@@ -4,8 +4,6 @@ public class Fraction implements IFraction {
 
     private final Integer numerator;
     private final Integer denominator;
-    public Integer numeratorResult;
-    public Integer denominatorResult;
 
     public Fraction(Integer numerator, Integer denominator) {
         this.numerator = numerator;
@@ -26,29 +24,29 @@ public class Fraction implements IFraction {
 
     @Override
     public IFraction plus(IFraction other) {
-        numeratorResult = (other.getDenominator() * numerator) + (denominator * other.getNumerator());
-        denominatorResult = denominator * other.getDenominator();
+        int numeratorResult = (other.getDenominator() * numerator) + (denominator * other.getNumerator());
+        int denominatorResult = denominator * other.getDenominator();
         return createNormalised(numeratorResult, + denominatorResult);
     }
 
     @Override
     public IFraction minus(IFraction other) {
-        numeratorResult = numerator * other.getDenominator() - other.getNumerator() * denominator;
-        denominatorResult = denominator * other.getDenominator();
+        int numeratorResult = numerator * other.getDenominator() - other.getNumerator() * denominator;
+        int denominatorResult = denominator * other.getDenominator();
         return createNormalised(numeratorResult, denominatorResult);
     }
 
     @Override
     public IFraction times(IFraction other) {
-        numeratorResult = numerator * other.getNumerator();
-        denominatorResult = denominator * other.getDenominator();
+        int numeratorResult = numerator * other.getNumerator();
+        int denominatorResult = denominator * other.getDenominator();
         return createNormalised(numeratorResult, denominatorResult);
     }
 
     @Override
     public IFraction dividedBy(IFraction other) {
-        numeratorResult = other.getDenominator() * numerator;
-        denominatorResult = denominator * other.getNumerator();
+        int numeratorResult = other.getDenominator() * numerator;
+        int denominatorResult = denominator * other.getNumerator();
         return createNormalised(numeratorResult, denominatorResult);
     }
 
