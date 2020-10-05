@@ -47,8 +47,8 @@ public class Fraction implements IFraction {
 
     @Override
     public IFraction dividedBy(IFraction other) {
-        int numeratorResult = other.getDenominator() * numerator;
-        int denominatorResult = denominator * other.getNumerator();
+        numeratorResult = other.getDenominator() * numerator;
+        denominatorResult = denominator * other.getNumerator();
         return createNormalised(numeratorResult, denominatorResult);
     }
 
